@@ -44,8 +44,10 @@ func makePool(n int, handler func(int, string)) (func(string), func()) {
 	// В функции получаем ID из пула, обрабатываем фразу и возвращаем ID в пул
 	handle := func(str string) {
 		id := <-pool
-		handler(id, str)
-		pool <- id
+		go func() {
+			handler(id, str)
+			pool <- id
+		}()
 	}
 
 	// Ожидаем все ID из пулов
