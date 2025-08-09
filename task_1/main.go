@@ -22,9 +22,9 @@ func countDigitsInWords(phrase string) counter {
 	wg.Add(len(words))
 	for _, word := range words {
 		go func() {
+			defer wg.Done()
 			n := countDigits(word)
 			syncStats.Store(word, n)
-			wg.Done()
 		}()
 	}
 	wg.Wait()
