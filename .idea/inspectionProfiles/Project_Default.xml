@@ -835,6 +835,7 @@
     <inspection_tool class="TolkDeprecation" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="TolkDivideByZero" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="TolkExpectTypeBuiltin" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="TolkFunKeywordExpected" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="TolkFunctionCall" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="TolkIntOverflow" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="TolkMissingReturn" enabled="false" level="ERROR" enabled_by_default="false" />
